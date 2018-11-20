@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>itoktsnhc@hotmail.com</Authors>
+    <Product>Serilog.Sinks.AzureServiceBus</Product>
+    <Description>Serilog.Sinks.AzureServiceBus</Description>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Itoktsnhc/Serilog.Sinks.AzureServiceBus/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Itoktsnhc/Serilog.Sinks.AzureServiceBus</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
