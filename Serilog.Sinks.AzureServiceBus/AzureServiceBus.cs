@@ -66,6 +66,24 @@ namespace Serilog.Sinks.AzureServiceBus
             this LoggerSinkConfiguration loggerConfiguration,
             string connStr,
             string entityPath,
+            string outputTemplate = DefaultOutputTemplate,
+            ITextFormatter textFormatter = null,
+            LogEventLevel restrictedToMinimumLevel = LevelAlias.Minimum)
+        {
+            if (loggerConfiguration == null) throw new ArgumentNullException(nameof(loggerConfiguration));
+            if (connStr == null) throw new ArgumentNullException(nameof(connStr));
+            if (entityPath == null) throw new ArgumentNullException(nameof(entityPath));
+            if (outputTemplate == null) throw new ArgumentNullException(nameof(outputTemplate));
+
+            var sender = new MessageSender(connStr, entityPath);
+            var sink = new AzureServiceBus(sender, textFormatter);
+            return loggerConfiguration.Sink(sink, restrictedToMinimumLevel);
+        }
+
+        public static LoggerConfiguration AzureServiceBus(
+            this LoggerSinkConfiguration loggerConfiguration,
+            string connStr,
+            string entityPath,
             ITextFormatter formatter,
             LogEventLevel restrictedToMinimumLevel = LevelAlias.Minimum)
         {

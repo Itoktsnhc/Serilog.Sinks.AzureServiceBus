@@ -8,6 +8,7 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/Itoktsnhc/Serilog.Sinks.AzureServiceBus/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Itoktsnhc/Serilog.Sinks.AzureServiceBus</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
